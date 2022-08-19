@@ -122,8 +122,12 @@ def graficar(datos):
     con_gap = [item[1] for item in datos]
     sin_gap = [item[2] for item in datos]
 
-    plt.scatter(eje_x, con_gap, label='Con Gap')
-    plt.scatter(eje_x, sin_gap, label='Sin Gap')
+    plt.title('Tiempo de ejecución vs cantidad de hilos')
+    plt.xlabel('Hilos')
+    plt.ylabel('Tiempo (s)')
+    plt.plot(eje_x, con_gap, label='Con Gap', marker='o')
+    plt.plot(eje_x, sin_gap, label='Sin Gap', marker='x')
+    plt.legend(loc='upper right')
     plt.savefig(f'{OUTPUT_FOLDER}/salida.pdf')
 
 
