@@ -5,3 +5,6 @@ __pycache__/
 
 # Compiled files folder
 build/
+
+# Virtual environment
+venv
